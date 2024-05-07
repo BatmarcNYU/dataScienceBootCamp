@@ -1,0 +1,63 @@
+1. How do you control for biases?
+To control for biases, you can use randomization or blinding techniques to prevent biases in data collection or analysis.
+2. What are confounding variables?
+Confounding variables are extraneous factors that correlate with both the independent and dependent variables in a study, making it difficult to determine the true relationship between the variables of interest. 
+3. What is A/B testing?
+Its a method used to compare two versions of a product or service to determine which one performs better. It involves dividing users into two groups, A and B, and exposing each group to a different version (A or B) while measuring key performance metrics to determine which version provides the best results.
+4. When will you use Welch t-test?
+If I need to compare the means of two independent groups when the assumption of equal variances is violated. 
+5. A company claims that the average time its customer service representatives spend on the phone per call is 6 minutes. You believe that the average time is actually higher. You collect a random sample of 50 calls and find that the average time spent on the phone per call in your sample is 6.5 minutes, with a standard deviation of 1.2 minutes. Test whether there is sufficient evidence to support your claim at a significance level of 0.05.
+
+I would start with my hypothesis:
+Null hypothesis avg = 6 minutes (the average time spent on the phone per call is 6 minutes)
+Alternative hypothesis (H1): μ (avg)  > 6 minutes (the average time spent on the phone per call is higher than 6 minutes)
+We are given:
+Sample mean = 6.5 minutes
+Sample size = 50
+Sample standard deviation = 1.2 minutes
+Significance level = 0.05 
+
+t = (mean - size) / (std deviation / √size)
+t = (6.5 - 6) / (1.2 / √50)
+Thus
+t = 2.886
+Degrees of freedom (df) = size - 1 = 49
+Now lets find the critical t-value:
+Using a t-table, we see for Degrees of freedom = 49 and  Significance level = 0.05, the critical t-value is approximately 1.676 . Since the calculated t is greater than the t from the t table we reject the null hypothesis and conclude that there is sufficient evidence to support the claim that the average time customer service representatives spend on the phone per call is higher than 6 minutes at a significance level of 0.05.
+
+
+
+
+6. A researcher wants to determine whether there is a difference in the mean scores of two groups of students on a math test. Group A consists of 25 students who received traditional teaching methods, while Group B consists of 30 students who received a new teaching method. The average score for Group A is 75, with a standard deviation of 8, and the average score for Group B is 78, with a standard deviation of 7. Test whether there is a significant difference in the mean scores of the two groups at a significance level of 0.05.
+
+Solution:
+Lets set the Null hypothesis as there is no significant difference in the mean scores of the two groups.
+Our alternative hypothesis would be that there is indeed a difference in the mean scores of the two groups.
+We are given:
+Size A n1 = 25
+Avg x̄1 = 75
+Std deviation s1 = 8
+Size B: n2 = 30
+Avg  x̄2 = 78
+Std deviation s2 = 7
+Lets find the standard deviation for both.
+sd= √[((std deviation1)²(size1 - 1) + (std deviation2)²(size2 - 1)) / (size1 + size2 - 2)]
+sd= √[((8²)(25 - 1) + (7²)(30 - 1)) / (25 + 30 - 2)]
+sd= 7.63:
+Now lets get the t score
+t = (avg1 - avg2) / (sd * √(1/size1 + 1/size2))
+t = (75 - 78) / (7.63 * √(1/25 + 1/30))
+t ≈ -1.455
+
+Now we can find the degree of freedom 
+I find a formula online but its too messy to write out and copy past does not work.
+
+
+df = 53 
+
+
+Now we find the critical t-value:
+With a df of 53 and significance of  0.05/2 since it's a two-tailed test, the critical t-value is approximately 2.004.
+
+
+Since the absolute value of the calculated t-statistic is less than the critical t-value ,we fail to reject the null hypothesis and conclude that there isn’t enough evidence to support the claim that there is a difference in the mean scores of the two groups.
